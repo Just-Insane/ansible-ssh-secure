@@ -1,3 +1,2 @@
 .vscode
 group_vars/*
-pam_duo.conf
