@@ -16,14 +16,16 @@
     state: latest
     update_cache: yes
 
+- name: Install git
+  yum:
+    name: git
+    state: latest
+    update_cache: yes
+
 - name: Copy pam_duo.conf
-  copy:
-    src: pam_duo.conf
-    dest: /etc/duo/pam_duo.conf
-    owner: root
-    group: root
-    mode: 0644
-    backup: yes
+  git:
+    repo: 'git@gitsh.justin-tech.com:justin/ssh-secure-secrets.git'
+    dest: /etc/duo/
     force: yes
   notify:
     - restart sshd
