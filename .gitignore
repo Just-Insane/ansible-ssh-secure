@@ -1,2 +1,2 @@
 .vscode
-group_vars\*
+group_vars/*
