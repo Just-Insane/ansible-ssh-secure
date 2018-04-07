@@ -6,6 +6,10 @@
     gpgcheck: yes
     gpgkey: https://duo.com/RPM-GPG-KEY-DUO
 
+  file:
+    path: /etc/yum.repos.d/Duo\ Security\ Repository.repo
+    state: absent
+
 - rpm_key:
     state: present
     key: https://duo.com/RPM-GPG-KEY-DUO
