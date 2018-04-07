@@ -22,6 +22,11 @@
     state: latest
     update_cache: yes
 
+- name: Remove /etc/duo
+  file:
+    path: /etc/duo
+    state: absent
+
 - name: Copy pam_duo.conf
   git:
     repo: 'git@gitsh.justin-tech.com:justin/ssh-secure-secrets.git'
