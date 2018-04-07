@@ -17,7 +17,7 @@
     update_cache: yes
 
 - name: Copy pam_duo.conf
-  file:
+  copy:
     src: pam_duo.conf
     dest: /etc/duo/pam_duo.conf
     owner: root
